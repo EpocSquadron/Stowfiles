@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=Salt-N-Pepper
+Type=X-GNOME-Metatheme
+Comment=A medium theme with dark highlights for GTK2 and Metacity
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Salt-N-Pepper
+MetacityTheme=Salt-N-Pepper
+IconTheme=gnome-carbonite
+CursorTheme=DMZ-White
+CursorSize=24

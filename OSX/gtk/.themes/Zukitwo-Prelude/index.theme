@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Zukiprelude
+Comment=Slightly modified Zukitwo-Brave theme
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Zukiprelude
+IconTheme=gnome-brave

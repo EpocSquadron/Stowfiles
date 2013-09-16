@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.00
+Encoding=UTF-8
+Name=Simply Choice 1.0
+Type=X-GNOME-Metatheme
+Comment=Gtk 2.0 Simply Choice 1.0 theme
+
+[X-GNOME-Metatheme]
+GtkTheme=Simply Choice 1.0
+MetacityTheme=Simply Choice 1.0
+IconTheme=ubuntu-mono-dark
+CursorTheme=DMZ-Black
+ButtonLayout=close,minimize,maximize:menu

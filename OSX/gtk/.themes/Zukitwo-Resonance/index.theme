@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Zukitwo-Resonance
+Comment=Zukitwo Resonance GTK2 / GTK3 theme
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Zukitwo-Resonance
+MetacityTheme=Zukitwo
+IconTheme=Faenza-Dark
+CursorTheme=default

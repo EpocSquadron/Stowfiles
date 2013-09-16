@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Zukitwo
+Comment=Zukitwo GTK2 / GTK3 theme
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Zukitwo
+MetacityTheme=Zukitwo
+IconTheme=Faenza-Dark
+CursorTheme=default
