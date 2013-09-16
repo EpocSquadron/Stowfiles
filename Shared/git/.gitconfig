@@ -1,0 +1,65 @@
+[user]
+	name = Daniel Poulin
+	email = dan.poulin@digitalsurgeons.com
+[core]
+# Don't track permissions other than standard modes.
+	filemode = false
+# Don't ignore File -> file changes.
+	ignorecase = false
+# Vim is better.
+	editor = vim
+[color]
+    ui = true
+[help]
+	autocorrect = 1
+[alias]
+# Short status
+	st = status -sb
+# Easy checkout
+	co = checkout
+# Remove both local and remote of a branch.
+	rmb = !sh -c 'git branch -D $1 && git push origin :$1' -
+# Show all files affected since refspec (tag, branch, or HEAD~n)
+	lsch = "!f() { git diff --name-status -r "$1"; }; f"
+# Show pretty log
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+# Word-diff
+	df = diff --word-diff
+# Amend files more easily
+	amend = commit --amend
+# Count commits from each commiter
+	count = shortlog -sn --no-merges
+# Get what branch you're on
+	current = rev-parse --abbrev-ref HEAD
+# Rewrite a commit as if made by someone else
+	credit = "!f() { git commit --amend --author "$1 <$2>" -C HEAD; }; f"
+# Show everything being ignored in the repo
+	ignored = ls-files --others -i --exclude-standard
+# Show everything i've authored on this repo since yesterday.
+	standup = "!git log --since yesterday --author `git config user.email` --pretty=short"
+# See what new commits have been created by the last command (typically after a "git pull")
+	new = !sh -c 'git log $1@{1}..$1@{0} "$@"'
+# See what new commits you have made since last pull on this branch
+	since = "!f() { git diff $(git merge-base "$1" "$2"); }; f "remotes/origin/$(git rev-parse --abbrev-ref HEAD)" $(git rev-parse --abbrev-ref HEAD)"
+# Show all commits whose hashes start with a given string
+# Good for inspecting whether there is a collision with a short hash.
+	abbr = "!sh -c 'git rev-list --all | grep ^$1 | while read commit; do git --no-pager log -n1 --pretty=format:\"%H %ci %an %s%n\" $commit; done' -"
+# sha1 of nothing
+	empty-tree-sha1 = hash-object -t tree /dev/null
+# Check whitespace violations in the working tree
+	whitespace = !git diff --check $(git empty-tree-sha1)
+# Stage only deleted, formerly tracked files.
+    rmadd = "!f() { for x in `git status | grep deleted | awk '{print $3}'`; do git rm $x; done  }; f"
+# Show all of these
+	aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
+[diff]
+	tool = meld
+[merge]
+	tool = meld
+[push]
+# Always push just the current branch.
+	default = current
+[branch]
+# Makes git pull use rebase for linear history and
+# avoids making new commits for phantom branches.
+	autosetuprebase = remote
