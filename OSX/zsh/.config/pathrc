@@ -1,0 +1,8 @@
+# Add common executables here..
+export PATH="$HOME/.rbenv/versions/1.9.3-p385/lib/ruby/gems:$HOME/.scripts:/usr/local/sbin:/usr/local/bin:/usr/local/share/npm/bin:/Applications/LibreOffice.app/Contents/MacOS:$PATH"
+
+# Prefer brew's python, required for meld to work.
+export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
+
+# Added by travis gem
+source /Users/danpoulin/.travis/travis.sh

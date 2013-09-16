@@ -39,5 +39,5 @@ source $ZSH/oh-my-zsh.sh
 # Set editor to vim
 export EDITOR="vim"
 
-# Customize to your needs...
-PATH=/usr/lib/node_modules/:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/android-sdk/platform-tools:/opt/android-sdk/tools:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/dan/.scripts
+# Source machine-specific PATH modifications.
+source $HOME/.config/zsh/pathrc
