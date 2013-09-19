@@ -39,5 +39,8 @@ source $ZSH/oh-my-zsh.sh
 # Set editor to vim
 export EDITOR="vim"
 
+# NVM
+[[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh
+
 # Source machine-specific PATH modifications.
 source $HOME/.config/zsh/pathrc
