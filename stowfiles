@@ -1,0 +1,30 @@
+#!/bin/bash
+
+usage() {
+  	read -r -d '' USAGE_TEXT <<HEREDOC
+\033[1mUsage:\033[0m
+	`basename $0` <environment> <app>
+
+\033[1mDescription:\033[0m
+	More easily sync stowfiles specific to this directory structure.
+HEREDOC
+}
+
+# Find location of this script.
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+# Get machine and app names
+MACHINE=$1
+APP=$2
+
+# Check that user is asking for an action
+if [ ! $2 ]; then
+	usage
+  	exit;
+fi
+
+# Once for the shared config
+stow --verbose=1 --dir="$DIR/Shared" --target="$HOME" $APP
+
+# Once for the machine specific config
+stow --verbose=1 --dir="$DIR/$MACHINE" --target="$HOME" $APP
