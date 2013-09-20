@@ -1,6 +1,5 @@
-[user]
-	name = Daniel Poulin
-	email = dan.poulin@digitalsurgeons.com
+[include]
+	path = .config/git/userconfig
 [core]
 # Don't track permissions other than standard modes.
 	filemode = false
