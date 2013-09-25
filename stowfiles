@@ -24,7 +24,7 @@ if [ ! $2 ]; then
 fi
 
 # Once for the shared config
-stow --verbose=1 --dir="$DIR/Shared" --target="$HOME" $APP
+[[ -s "$DIR/Shared/$APP" ]] && stow --verbose=1 --dir="$DIR/Shared" --target="$HOME" $APP
 
 # Once for the machine specific config
-stow --verbose=1 --dir="$DIR/$MACHINE" --target="$HOME" $APP
+[[ -s "$DIR/$MACHINE/$APP" ]] && stow --verbose=1 --dir="$DIR/$MACHINE" --target="$HOME" $APP
