@@ -1,5 +1,5 @@
 # Add common executables here..
-export PATH="$HOME/.scripts:/usr/local/sbin:/Applications/LibreOffice.app/Contents/MacOS:$PATH"
+export PATH="$HOME/.scripts:/usr/local/bin:/usr/local/sbin:/Applications/LibreOffice.app/Contents/MacOS:$PATH"
 
 # Prefer brew's python, required for meld to work.
 export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
