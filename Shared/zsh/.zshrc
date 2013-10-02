@@ -39,13 +39,13 @@ source $ZSH/oh-my-zsh.sh
 # Set editor to vim
 export EDITOR="vim"
 
+# Source machine-specific PATH modifications.
+source $HOME/.config/zsh/pathrc
+
 # NVM
 [[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh
 
 # RVM
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
-# Source machine-specific PATH modifications.
-source $HOME/.config/zsh/pathrc
 
