@@ -75,3 +75,6 @@ set mouse=a         " Enable the use of the mouse.
 
 filetype plugin indent on
 syntax on
+
+" Crontab needs to be edited in place.
+au FileType crontab set nobackup nowritebackup
